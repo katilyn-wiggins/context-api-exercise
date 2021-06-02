@@ -8,14 +8,10 @@ const Header = () => {
   return (
     <div style={ toggle ? { background: 'blue' } : {}}>
       <h1>Hey Arnold!</h1>
-      {/* <button onClick={toggleFunction}>
-                Change Theme
-      </button> */}
       <label className={Styles.switch}>
         <input type="checkbox" onClick={toggleFunction}/>
         <span className={Styles.slider}></span>
       </label>
-      {/* {toggle ? 'darkMode' : 'lightMode'} */}
     </div>
   );  
 };
