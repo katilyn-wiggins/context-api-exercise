@@ -10,6 +10,8 @@ describe('MainPage container testing', () => {
   it('should render a list of hey arnold characters', async () => {
     render(<MainPage />);
 
+    screen.getByText('Loading...');
+
     const ul = await screen.findByRole('list', { name: 'character-list' });
     expect(ul).toMatchSnapshot(); 
 
