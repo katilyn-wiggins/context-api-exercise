@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
@@ -10,7 +11,7 @@ const CharacterList = ({ loading, characters }) => {
         ?
         <h3>Loading...</h3>
         :
-        <ul>
+        <ul aria-label="character-list">
           {characters.map(character => (<Character
             key={character.id}
             name={character.name}

@@ -8,6 +8,8 @@ const MainPage = () => {
 
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
+  const toggle = React.useContext(ThemeContext); 
+
 
   useEffect(() => { 
     getCharacters()
@@ -17,7 +19,7 @@ const MainPage = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  const { toggle } = React.useContext(ThemeContext); 
+  
   return (
     <div style={ toggle ? { background: 'lightblue' } : {}}>
       <h2>Main Page Container!</h2>
